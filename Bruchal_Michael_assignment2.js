@@ -8,8 +8,9 @@ var gym = "Travis AFB Fitness Center",
     me = "Mike",
     exerciseRoutine = ["Bench Press", "Squat", "Shoulder Press", "Pull Ups"],
     minutesPerExercise = [15, 20, 10, 10],
-    gymIsOpen = true;
-    
+    gymIsOpen = true,
+    weightRoomIsOpen = true,
+    cardioRoomIsOpen = false;
 
 //Procedure
 var startRoutine = function (gymIsOpen) {
@@ -23,29 +24,39 @@ startRoutine (gymIsOpen);
 
 //Boolean Function
 var weightRoom = function (liftWeights, runAllDay) {
-	 var weightRoomIsOpen = true,
-	     cardioRoomIsOpen = false 
-    if ((gymIsOpen && weightRoomIsOpen) || cardioRoomIsOpen) {
+	  if ((gymIsOpen && weightRoomIsOpen) || cardioRoomIsOpen) {
     console.log(me + " and " + brother + " is gonna hit the weights!");
   } else {
     console.log("I guess we can run on the road.");
 }
-	 itsOn = (gymIsOpen && weightRoomIsOpen)
+	 itsOn = (gymIsOpen && weightRoomIsOpen);
 	 return itsOn;
 };
 weightRoom (brother, me);
+	  console.log("Lets do chest. " + me + " is first!");
 
 //Number Function
+var startingWeight = function () {
+	  var startIbs = 205;
+	  while (startIbs <= 315) {
+		console.log(startIbs + " pounds is too light!");
+		startIbs+=25;}
+		console.log(305 + " pounds is the maximum. Its " + brother + "'s turn.");
+		return startIbs;
+}; 
+startingWeight ();
+console.log("Gotta rehydrate!");
 
 //String Function
-
+var energyDrink = function ("redbull", "redbull zero") {
+	 
+};	
 //Array Function
 	
 	
 	
 
-/*var exercises = ["Bench press", "Squat", "Shoulder press", "Pull-ups"],
-		 minutesPerExercise = [15, 20, 10, 10];
+/*
 var firstExercise = function () {
 	var exercise = exercises[burnIt],
 			 minutesThisExercise = minutesPerExercise[burnIt];
