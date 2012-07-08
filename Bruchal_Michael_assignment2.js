@@ -32,7 +32,7 @@ var weightRoom = function (liftWeights, runAllDay) {
 	 itsOn = (gymIsOpen && weightRoomIsOpen);
 	 return itsOn;
 };
-weightRoom (brother, me);
+weightRoom(brother, me);
 	  console.log("Lets do chest. " + me + " is first!");
 
 //Number Function
@@ -44,13 +44,23 @@ var startingWeight = function () {
 		console.log(305 + " pounds is the maximum. Its " + brother + "'s turn.");
 		return startIbs;
 }; 
-startingWeight ();
+startingWeight();
 console.log("Gotta rehydrate!");
 
 //String Function
-var energyDrink = function ("redbull", "redbull zero") {
-	 
+var energyDrink = function (time, name, message) {
+	 var drink1 = "redbull";
+	 var timeLeft = 0
+	 console.log(time + " minutes left" + name + message + " finish his " + drink1 + ".");
+	 if (timeLeft < 5) {
+	 console.log("Your done. Next Exercise!");
+	 return timeLeft;
+		
+	}
 };	
+energyDrink(5, " Mike", " needs to");
+energyDrink(5, " Jon", " needs to");
+
 //Array Function
 	
 	
