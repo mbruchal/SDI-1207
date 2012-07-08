@@ -6,8 +6,8 @@
 var gym = "Travis AFB Fitness Center",
     brother = "Jon",
     me = "Mike",
-    exerciseRoutine = ["Bench Press", "Squat", "Shoulder Press", "Pull Ups"],
-    minutesPerExercise = [15, 20, 10, 10],
+    exerciseRoutine = ["Squat", "Shoulder Press", "Pull Ups"],
+    minutesPerExercise = [20, 10, 10],
     gymIsOpen = true,
     weightRoomIsOpen = true,
     cardioRoomIsOpen = false;
@@ -45,7 +45,7 @@ var startingWeight = function () {
 		return startIbs;
 }; 
 startingWeight();
-console.log("Gotta rehydrate!");
+console.log("Lets take a break, gotta rehydrate!");
 
 //String Function
 var energyDrink = function (time, name, message) {
@@ -62,13 +62,10 @@ energyDrink(5, " Mike", " needs to");
 energyDrink(5, " Jon", " needs to");
 
 //Array Function
-	
-	
-	
 
-/*
-var firstExercise = function () {
-	var exercise = exercises[burnIt],
+
+var firstExercise = function (burnIt) {
+	var exercise = exerciseRoutine[burnIt],
 			 minutesThisExercise = minutesPerExercise[burnIt];
 			console.log("Lets do the " + exercise + " for " + minutesThisExercise + " minutes.");
 			for (var minutes = 0; minutes < minutesThisExercise; minutes +=5) {
@@ -77,7 +74,10 @@ var firstExercise = function () {
 			}
 			console.log("We have reached muscle failure!");
 };
+var finish = function () {
+	for (var burnIt = 0; burnIt < exerciseRoutine.length; burnIt++) {
+			firstExercise (burnIt);}
+};
+finish();
+console.log("That was a good workout. Now lets get something to eat.");
 
-for (var burnIt = 0; burnIt < exercises.length; burnIt++) {
-		firstExercise ();}
-*/
