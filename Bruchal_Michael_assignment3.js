@@ -10,13 +10,13 @@ var destination1 = "Sacramento",
 
 //Properties
 var me = {
-          name: "Mike",		//string
+          name: "Mike",   //string
           male: true,       //boolean
           age: 32,          //number
           height: "6'0",
           weight: 195,
           status: ["Employed", "Student", "Married"],    //array
-          records: [									 //object
+          records: [                   //object
                     {bench: 315,
                      shoulderPress: 225,
                      squat: 365,
@@ -44,17 +44,6 @@ me.train();
 console.log ("Three different shows to choose from in " + destination1 + ", " + destination2 + ", and " + destination3 + ".");
 var balance = me.getTickets(300);
 console.log (balance);
-
-
-
-
-
-
-
-
-
-
-
 
 
 
