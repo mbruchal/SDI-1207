@@ -15,16 +15,16 @@ var me = {
           age: 32,          //number
           height: "6'0",
           weight: 195,
-          goal: [bench = 365, shoulderPress = 275, squat = 465, deadlift = 520],   //array
+          goal: ["Bench: " + 365 + " Shoulderpress: " + 275 + " Squat: " + 465 + " DeadLift: " + 520],   //array
           records: [                   //object
                     {
-                     bench: 315,
-                     shoulderPress: 225,
-                     squat: 365,
-                     deadlift: 405,
+                     bench: "315 Ibs.",
+                     shoulderPress: "225 Ibs.",
+                     squat: "365 Ibs.",
+                     deadlift: "405 Ibs.",
                     }
                    ],
-          train: function (workOutType) {     //Method Procedure
+          train: function (workOutType) {     //Method Procedure, Argument Object
                  console.log ("Preparing for a BodyBuilding Competition in Northern California.");
                 if (me.weight > 185) {        //Conditional
                     console.log ("I qualify for the Light Heavy Weight divison.");
@@ -33,7 +33,7 @@ var me = {
                   };    
                 
           },
-          getTickets: function (wallet) {     //Method Accessor
+          getTickets: function (wallet) {     //Method Accessor, Argument Number
                 var compOne = 75,
                     compTwo = 90,
                     compThree = 50;
@@ -47,16 +47,24 @@ var me = {
                   } else {
                       console.log ("Maybe I'll compete it just two competitions.");
                   }; 
-                      var cash = wallet + " bucks should be enough and still have change.";     //return string
+                      var cash = wallet + " bucks should be enough. Now I can buy more food!";     //return string
                       return cash;
           },
-          weightGoal: function (heavy, light) {   //Method Function
-              while (me.weight <= 210) {
+          weightGoal: function (heavy, light) {     //Method Function, Argument String
+              while (me.weight <= 210) {      //while loop
                 console.log ("Eating more protein to make weight. " + me.weight + " pounds is not enough.");
                 me.weight +=2;
               }; 
-                  result = heavy + " is about right. " + light + " is too light.";
-                  return result;
+                  result = heavy + " is perfect. " + light + " was too light.";
+                  return result;    //return string
+          },
+          changeGoal: function (newGoal) {     //Mutator Function, Array Argument
+              var newGoal = ["Bench: " + 380 + ", Shoulderpress: " + 295 + ", Squat: " + 405 + ", Deadlift: " + 405];
+              me.goal = newGoal
+              return newGoal    //Return Array
+          },
+          startPlan: function () {
+              console.log (exRoutine.exercisePlan["week1"]);
           }
 
 };
@@ -69,8 +77,14 @@ console.log (balance);
 console.log ("Got to reach my lift goal first.");
 console.log ("My current records are....");
 console.log (me.records);
-var weightWatch = me.weightGoal("215 Ibs.", "190 Ibs.");
+console.log ("I am currently " + me.weight + " pounds and neet to be at 210.")
+var weightWatch = me.weightGoal("210 Ibs.", "190 Ibs.");
 console.log (weightWatch);
+console.log ("My 1st goal plan - " + me.goal + ". Decided to change it up");
+var revised = me.changeGoal();
+console.log ("Change of plans to new goal - " + revised);
+me.startPlan();
+
 
 
 
