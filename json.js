@@ -5,9 +5,10 @@
 */
 
 var exRoutine = {
-		"exercisePlan": [{
+		"exercisePlan": 
+      [
+      {
                "week1": 
-               
                {
                   "mon": "chest",
                   "tues": "legs",
@@ -45,5 +46,6 @@ var exRoutine = {
                   "durationPerMin": [weights = 25, cardio = 30, stretch = 20]
                }
                
-      }] 
+      }
+      ] 
 };

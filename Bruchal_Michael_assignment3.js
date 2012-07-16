@@ -38,8 +38,8 @@ var me = {
                 console.log ("Time to start eating clean.");
               } else {
                   console.log ("I'll just goof around in " + destination1 + ", " + destination2 + ", and " + destination3 + " instead.");
-              };
-              return true;    //return Boolean
+                };
+                return true;    //return Boolean
           },
           getTickets: function (wallet) {     //Method Accessor, Argument Number
                 var compOne = 75,
@@ -54,13 +54,13 @@ var me = {
                         };
                   } else {
                       console.log ("Maybe I'll compete it just two competitions.");
-                  }; 
+                    }; 
                       var cash = wallet + " bucks should be enough. Now I can buy more food!";     //return string
                       return cash;
           },
           weightGoal: function (heavy, light) {     //Method Function, Argument String
               while (me.weight <= 210) {      //while loop
-                console.log ("Eating more protein to make weight. " + me.weight + " pounds is not enough.");
+                console.log ("Eating more protein to make weight. " + me.weight + " pounds and counting....");
                 me.weight +=2;
               }; 
                   result = heavy + " is perfect. " + light + " was too light.";
@@ -106,7 +106,11 @@ console.log (weightWatch);
 console.log ("My 1st goal plan - " + me.goal + ".");
 var revised = me.changeGoal();
 console.log ("Change of plans to new goal - " + revised);
-me.schedule();
+console.log ("My plan of attack is as follows: ");
 var displayPlan = me.startPlan();
 console.log (displayPlan);
+console.log ("Here we go.....")
+me.schedule();
+console.log ("All done. ")
+
 
