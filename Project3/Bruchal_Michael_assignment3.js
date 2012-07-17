@@ -25,14 +25,14 @@ var me = {
                     }
                    ],
           getName: function () {    //Accessor Method
-            return me["name"];      //Return String
+              return me["name"];      //Return String
           },
           train: function (workOutType) {     //Method Procedure, Argument Object
-                 console.log ("This is my 2nd BodyBuilding Competition in Northern California.");
+              console.log ("This is my 2nd BodyBuilding Competition in Northern California.");
                 if (workOutType === exRoutine.exercisePlan[0]) {        //Conditional/json data
-                    console.log ("I qualify for the Light Heavy Weight divison.");
+                  console.log ("I qualify for the Light Heavy Weight divison.");
                 } else {
-                     console.log ("I qualify for the Middle Weight Division.");
+                    console.log ("I qualify for the Middle Weight Division.");
                   };    
                 
           },
@@ -45,9 +45,9 @@ var me = {
                   return true;    //return Boolean
           },
           signUps: function (wallet) {     //Method Function, Argument Number, Nested Conditional
-                var compOne = 75,
-                    compTwo = 90,
-                    compThree = 50;
+              var compOne = 75,
+                  compTwo = 90,
+                  compThree = 50;
                   if (wallet > compOne + compTwo + compThree) {     
                       console.log ("I got " + wallet + " dollars cash on hand and can try all three competitions.");
                       if (wallet < compTwo) {
@@ -70,16 +70,16 @@ var me = {
                     return result;    //return string
           },
           changeGoal: function (newGoal) {     //Mutator Function, Argument Array
-            me.goal = newGoal
-              return newGoal    //Return Array
+              me.goal = newGoal
+                return newGoal    //Return Array
           },
           startPlan: function () {    //Method Function,  
-            layout = exRoutine.exercisePlan[0];   //json data
-              return layout;    //return object
+              layout = exRoutine.exercisePlan[0];   //json data
+                return layout;    //return object
           },
           schedule: function () {     //Method Function, 
-            var weeks = 4,
-                off = 0;
+              var weeks = 4,
+                  off = 0;
               for (var i = 0; i < weeks; i++) {   //For Loop
                 var weeksRemain = weeks - i;
                 console.log (i + " weeks down. " + weeksRemain + " weeks to go.");
