@@ -45,7 +45,6 @@ var exRoutine = {
                   "diet": true,
                   "durationPerMin": [weights = 25, cardio = 30, stretch = 20]
                }
-               
       }
       ] 
 };
