@@ -13,11 +13,14 @@ var myLib = function () {
 	
 
 	//Does a string follow an aaa@bbb.ccc pattern like a email address?
-	/*var validateEmail = function (emailaddress) {};
-	return isValid,
+	var isEmailValid = function (emailAddress) {											//Method Function
+		var emailCheck = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;   //Regular Expression code
+			return emailCheck.test(emailAddress);										  //Returns Boolean
+	};
+	
 
 	//is the string a url? (Does it start with http: or https:?)
-	var validateURL = function (url) {};
+	/*var validateURL = function (url) {};
 	return ,
 
 	//Fuzzy-match a number: is the number above or below a number within a certain percent?
@@ -33,15 +36,16 @@ var myLib = function () {
 	return ,*/
 
 	return {
-		"isPhoneNumValid": isPhoneNumValid
+		"isPhoneNumValid": isPhoneNumValid,
+		"isEmailValid": isEmailValid
 	};
 
 };
 
 var myNewLib = myLib();
 
-console.log (myNewLib.isPhoneNumValid(8083895768));	//Returns True
-
+console.log ("Phone number is " + myNewLib.isPhoneNumValid(8083895768));	//Returns True
+console.log ("Email address is " + myNewLib.isEmailValid("combatvet100.442@gmail.com"));	//Returns True
 
 
 
