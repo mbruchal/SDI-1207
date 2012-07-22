@@ -18,7 +18,6 @@ var myLib = function () {
 			return emailCheck.test(emailAddress);										  //Returns Boolean
 	};
 	
-
 	//is the string a url? (Does it start with http: or https:?)
 	var isUrlValid = function (url) {											//Mthod Function
 		var urlCheck = /^(http[s]?:\/\/){0,1}([a-zA-Z]{2,5})[\.]{0,1}/;		   //RegEx code		/^(http[s]?:\/\/)= first character block must begin with a http or https followed by 2 forward slashes,  {0,1}([a-zA-Z]{2,5})[\.]{0,1}= must be followed with character blocks upper and lower case min of 2 and max of 5 seperated by periods.
@@ -31,15 +30,24 @@ var myLib = function () {
 					  }
 			};
 	};
+
 	//Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
 	var numFormat = function (number) {														//Method Function
 		var moveDecimal = number.toFixed(2);											   //Local Variable
 			return moveDecimal;															  //Return Number
 	};
-	//Find the number of hours or days difference between two dates.
-	//var calctotal = function (start, end) {};
-	//return total,
 
+	//Find the number of hours or days difference between two dates.
+	var dayDifference = function (year, month, day) {							//Method Function
+		var date1 = new Date(),												   //Local Variables
+			date2 = new Date(year, month, day),
+			difference = date2 - date1,
+			minutes = difference / 60000,
+			hours = minutes / 60,
+			days = Math.floor (hours / 24);
+				return days;												//Return String
+	};
+	
 	//Given a string version of a number such as "42", return the value as an actual Number, such as 42.
 	var changeNumber = function (stringNumber) {								//Method Function
 		var realNum = parseFloat(stringNumber);								   //Local Variable
@@ -54,6 +62,7 @@ var myLib = function () {
 		"isEmailValid"    : isEmailValid,
 		"isUrlValid"      : isUrlValid,
 		"numFormat"       : numFormat,
+		"dayDifference"   : dayDifference,
 		"changeNumber"    : changeNumber
 	};
 
@@ -65,7 +74,8 @@ console.log ("Phone number is " + myNewLib.isPhoneNumValid(8083895768));
 console.log ("Email address is " + myNewLib.isEmailValid("combatvet100.442@gmail.com"));	
 myNewLib.isUrlValid("http://forum.xda-developers.com");
 console.log (myNewLib.changeNumber("42"));
-console.log (myNewLib.numFormat(2.1))
+console.log (myNewLib.numFormat(2.1));
+console.log (myNewLib.dayDifference(2012, 9, 31));
 
 
 
