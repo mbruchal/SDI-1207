@@ -49,13 +49,25 @@ var myLib = function () {
 	};
 	
 	//Given a string version of a number such as "42", return the value as an actual Number, such as 42.
-	var changeNumber = function (stringNumber) {								//Method Function
+	var changeToNumber = function (stringNumber) {								//Method Function
 		var realNum = parseFloat(stringNumber);								   //Local Variable
 			return realNum;													  //Return Number
 	};
+
 	//Find the smallest value in an array that is greater than a given number
-	//var arrayValue = function (smallest) {};
-	//return ,*/
+	var arrayValue = function (number) {										//Method Function
+		var array = [10, 15, 20, 25, 30, 35, 40, 45, 50],					   //Local Variable
+		  minimum = Math.max.apply(Math, array);							  			
+		  	for (i = 0; i < array.length; i++) {							  //For loop
+		  		if (array[i] > number) {									 //Math
+		  			if (array[i] < minimum) {								//Nested Conditional
+		  				minimum = array[i];
+		  			};
+		  		};
+		  	}; 
+		return minimum;													   //Return Number
+	};
+	
 
 	return {
 		"isPhoneNumValid" : isPhoneNumValid,
@@ -63,9 +75,9 @@ var myLib = function () {
 		"isUrlValid"      : isUrlValid,
 		"numFormat"       : numFormat,
 		"dayDifference"   : dayDifference,
-		"changeNumber"    : changeNumber
+		"changeToNumber"  : changeToNumber,
+		"arrayValue"      : arrayValue
 	};
-
 };
 
 var myNewLib = myLib();
@@ -73,9 +85,44 @@ var myNewLib = myLib();
 console.log ("Phone number is " + myNewLib.isPhoneNumValid(8083895768));	
 console.log ("Email address is " + myNewLib.isEmailValid("combatvet100.442@gmail.com"));	
 myNewLib.isUrlValid("http://forum.xda-developers.com");
-console.log (myNewLib.changeNumber("42"));
+console.log (myNewLib.changeToNumber("42"));
 console.log (myNewLib.numFormat(2.1));
 console.log (myNewLib.dayDifference(2012, 9, 31));
+console.log (myNewLib.arrayValue(40));
+
+//<============================Makeup Points==================================>
+
+//Makeup: Nested if statement Deliverable 1
+
+var firstClass = true;
+var delayed = false;
+
+if (firstClass === true) {
+	console.log ("This is gonna be a nice ride.");
+	if (delayed === false) {
+		console.log ("This airlines is always on time.");
+	} else {
+		console.log ("Thats wierd this airlines is always on time.");
+	};
+} else {
+	console.log ("I guess its the back of the plane for me.");
+};
+
+//Makeup: Missing the required array method such as push Deliverable 2
+
+var myKids = [];
+myKids.push("Makaio", "Makaelyn", "Makana");
+console.log (myKids);
+
+
+
+
+
+
+
+
+
+
 
 
 
