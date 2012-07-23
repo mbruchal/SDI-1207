@@ -1,6 +1,7 @@
 html {
   
-    background: url(https://lh4.googleusercontent.com/-lrKbYgqxZ84/UAzwFoklyLI/AAAAAAAAAII/WxMIIv9Y0kM/s1152/IMAG0423.jpg) no-repeat center;
+    background: url(https://lh4.googleusercontent.com/-lrKbYgqxZ84/UAzwFoklyLI/AAAAAAAAAII/WxMIIv9Y0kM/s1152/IMAG0423.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 body {
     font-family: "Lucida Grande", "Arial", sans-serif;
