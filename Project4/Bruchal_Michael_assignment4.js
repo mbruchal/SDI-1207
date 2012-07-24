@@ -85,9 +85,9 @@ var myNewLib = myLib();
 console.log ("Phone number is " + myNewLib.isPhoneNumValid(8083895768));	
 console.log ("Email address is " + myNewLib.isEmailValid("combatvet100.442@gmail.com"));	
 myNewLib.isUrlValid("http://forum.xda-developers.com");
-console.log (myNewLib.changeToNumber("42"));
 console.log (myNewLib.numFormat(2.1));
-console.log (myNewLib.dayDifference(2012, 9, 31));
+console.log (myNewLib.dayDifference(2012, 11, 25));
+console.log (myNewLib.changeToNumber("42"));
 console.log (myNewLib.arrayValue(40));
 
 //<============================Makeup Points==================================>
